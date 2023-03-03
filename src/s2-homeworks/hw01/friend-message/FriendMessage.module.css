@@ -3,7 +3,7 @@ margin: 50px 0 30px 50px;
 }
 
 .friendImageAndText {
-
+    display: flex;
 }
 
 .friendImageAndText img {
@@ -14,6 +14,11 @@ margin: 50px 0 30px 50px;
 .friendText {
     font-weight: 400;
     font-size: 16px;
+    margin-left: 20px;
+    background-color: #F5F7FB;
+    padding: 10px;
+    box-shadow: 5px 20px rgba(29, 33, 38, 0.03), 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 10px;
 }
 
 .friendText:after {

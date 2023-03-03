@@ -1,9 +1,13 @@
 .message {
     margin: 50px 0 30px 50px;
+    width: 527px;
+    height: 60px;
+
+
 }
 
 .imageAndText {
-
+display: flex;
 }
 
 .imageAndText img {
@@ -15,6 +19,12 @@
 .text {
     font-weight: 400;
     font-size: 16px;
+    margin-left: 20px;
+    background-color: #0066CC;
+    padding: 10px;
+    box-shadow:  5px 20px rgba(29, 33, 38, 0.03), 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 10px;
+    color: white;
 }
 
 .text:after {
