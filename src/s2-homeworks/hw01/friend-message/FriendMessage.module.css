@@ -1,5 +1,5 @@
 .friendMessage {
-
+margin: 50px 0 30px 50px;
 }
 
 .friendImageAndText {
@@ -7,11 +7,13 @@
 }
 
 .friendImageAndText img {
-
+    width: 48px;
+    height: 48px;
 }
 
 .friendText {
-
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .friendText:after {
@@ -19,7 +21,9 @@
 }
 
 .friendName {
-
+font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 .friendMessageText {
@@ -27,5 +31,7 @@
 }
 
 .friendTime {
-
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px
 }
