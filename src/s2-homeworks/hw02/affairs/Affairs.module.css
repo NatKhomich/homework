@@ -1,7 +1,9 @@
 .buttonContainer {
     display: flex;
     gap: 24px;
-    margin-bottom: 32px;
+    /*margin-bottom: 32px;*/
+    margin: 32px;
+
 }
 
 .all {

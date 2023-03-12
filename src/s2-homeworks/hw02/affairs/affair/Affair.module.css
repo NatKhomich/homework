@@ -5,6 +5,7 @@
 
     border: 1.5px solid var(--color);
     border-radius: 5px;
+    margin-left: 30px;
 }
 
 .name {
