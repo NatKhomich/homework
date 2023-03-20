@@ -19,16 +19,17 @@
 }
 
 .inputClass{
+    width: 372px;
+    height: 36px;
 
 }
 
 .input:focus {
-    background-color: #CC0000;
+
 }
 
 .errorInput {
-    width: 372px;
-    height: 36px;
+
 }
 
 .button {
@@ -42,10 +43,11 @@
 }
 
 .button:focus {
+
 }
 
 .button:active {
-    background-color: darkblue;
+    background-color: fuchsia;
 }
 
 .button:disabled {
