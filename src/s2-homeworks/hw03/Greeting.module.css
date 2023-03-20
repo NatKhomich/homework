@@ -14,18 +14,17 @@
     margin-top: 3px;
 }
 
-.input {
-
+input {
+    width: 372px;
+    height: 36px;
 }
 
 .inputClass{
-    width: 372px;
-    height: 36px;
 
 }
 
 .input:focus {
-
+background-color: azure;
 }
 
 .errorInput {
