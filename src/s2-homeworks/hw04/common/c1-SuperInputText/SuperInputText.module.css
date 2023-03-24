@@ -1,20 +1,31 @@
 .input:focus {
+
 }
 
 .input {
+
 }
 
 .inputWrapper {
+    margin-left: 70px;
+
 }
 
 .superInput {
 }
 
 .errorInput {
+
 }
 
 .errorInput:focus {
+
 }
 
 .error {
+    color: red;
+}
+
+.inputs {
+
 }
