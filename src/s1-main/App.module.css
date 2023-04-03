@@ -8,6 +8,7 @@
 
 .hw {
 
+
 }
 
 
@@ -17,4 +18,11 @@ font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     line-height: 26px;
     margin: 131px 0 0 70px;
+}
+
+
+.messageFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

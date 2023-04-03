@@ -3,7 +3,7 @@
 }
 
 .textarea {
-    width: 976px;
+    width: 980px;
     min-height: 40px;
     margin-left: 70px;
     background-color: #F5F7FB;
@@ -21,6 +21,8 @@
     color: #FFFFFF;
     font-weight: 600;
     border: none;
+    position: absolute;
+    z-index: 0;
 }
 
 .button:hover {

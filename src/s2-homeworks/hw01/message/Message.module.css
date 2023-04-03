@@ -2,6 +2,8 @@
     margin: 50px 0 30px 50px;
     width: 527px;
     height: 60px;
+
+
 }
 
 .imageAndText {
@@ -21,9 +23,9 @@ display: flex;
     background-color: #0066CC;
     padding: 10px;
     box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03),0px 1px 2px rgba(29, 33, 38, 0.1);
-    border-radius: 10px;
     color: white;
     word-wrap: break-word;
+    border-radius: 10px 10px 10px 0;
 }
 
 .text:after {
