@@ -1,4 +1,6 @@
 .radio {
+/*margin-left:  40px;*/
+    border: 1px gold solid;
 }
 
 .radio::before {
@@ -9,7 +11,19 @@
 }
 
 .label {
+    border: 1px red solid;
+    display: flex;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px blue solid;
+}
+
+.span {
+    border: 2px solid #00cc22;
+    display: inline-block;
+
 }
