@@ -1,6 +1,5 @@
 .radio {
-/*margin-left:  40px;*/
-    border: 1px gold solid;
+    max-width: 40px;
 }
 
 .radio::before {
@@ -11,19 +10,19 @@
 }
 
 .label {
-    border: 1px red solid;
     display: flex;
+    margin: 0 0 10px 60px;
 }
 
 .options {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    border: 1px blue solid;
+
 }
 
 .span {
-    border: 2px solid #00cc22;
     display: inline-block;
+    margin-left: 20px;
 
 }
