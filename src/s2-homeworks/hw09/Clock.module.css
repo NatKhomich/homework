@@ -1,5 +1,5 @@
 .buttonsContainer {
-
+margin: 20px 0;
 }
 
 .clock {
@@ -13,4 +13,5 @@
 }
 
 .more {
+    margin-top: 10px;
 }
