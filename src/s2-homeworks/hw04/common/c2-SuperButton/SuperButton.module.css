@@ -58,5 +58,8 @@
 }
 
 .button:disabled {
-    cursor: default;
+    pointer-events: none;
+    color: #002e5c;
+    background: #004d99;
+    opacity: 0.5;
 }
