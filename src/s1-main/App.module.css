@@ -1,7 +1,6 @@
 .App {
     --header_height: 60px;
     margin: 0 auto;
-    /*max-width: 1200px;*/
     padding: 0px 50px 20px 5px;
     position: relative;
 }
@@ -25,4 +24,8 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+#hw10-button-start-loading{
+margin: 30px 0 0 50px;
 }
