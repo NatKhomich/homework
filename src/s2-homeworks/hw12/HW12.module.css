@@ -19,5 +19,9 @@ html {
 }
 
 .select {
-
+    margin: 20px 0 0 70px;
+    width: 171px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 17px;
 }
