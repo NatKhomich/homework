@@ -1,22 +1,40 @@
 .buttonsContainer {
+    margin: 30px 0 30px 70px;
 }
 
 .responseContainer {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .imageContainer {
 }
 
 .image {
+
 }
 
 .textContainer{
+    margin: 30px 0 30px 70px;
 }
 
 .code {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 20px;
 }
 
 .text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
 .info {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }

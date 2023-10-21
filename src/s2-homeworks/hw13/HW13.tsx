@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW13.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
-import axios from 'axios'
+import axios, {AxiosError} from 'axios'
 import success200 from './images/200.svg'
 import error400 from './images/400.svg'
 import error500 from './images/500.svg'
@@ -24,7 +24,8 @@ const HW13 = () => {
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
-                : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
+                // : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
+                : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
         setImage('')
@@ -38,10 +39,30 @@ const HW13 = () => {
                 setImage(success200)
                 // дописать
 
-            })
-            .catch((e) => {
-                // дописать
+                setText(res.data.errorText)
+                setInfo(res.data.info)
 
+            })
+            .catch((e: AxiosError) => {
+                // дописать
+                console.log(e.response)
+
+                if (e.response?.status === 500) {
+                    setCode('Ошибка 500!')
+                    setImage(error500)
+                    setText('эмитация ошибки на сервере')
+                    setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                } else if (e.response?.status === 400) {
+                    setCode('Ошибка 400!')
+                    setImage(error400)
+                    setText('Ты не отправил success в body вообще!')
+                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                } else {
+                    setCode('Error!')
+                    setImage(errorUnknown)
+                    setText('Network Error')
+                    setInfo('AxiosError')
+                }
             })
     }
 
@@ -55,6 +76,7 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -64,6 +86,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -74,6 +97,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === '...loading'}
 
                     >
                         Send undefined
@@ -83,6 +107,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
+                        disabled={info === '...loading'}
 
                     >
                         Send null

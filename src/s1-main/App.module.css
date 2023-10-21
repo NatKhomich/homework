@@ -1,7 +1,7 @@
 .App {
     --header_height: 60px;
     margin: 0 auto;
-    padding: 0px 50px 20px 5px;
+    /*padding: 0px 50px 20px 5px;*/
     position: relative;
 }
 
