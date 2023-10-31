@@ -37,11 +37,8 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                // дописать
-
                 setText(res.data.errorText)
                 setInfo(res.data.info)
-
             })
             .catch((e: AxiosError) => {
                 // дописать
@@ -77,8 +74,6 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         disabled={info === '...loading'}
-                        // дописать
-
                     >
                         Send true
                     </SuperButton>
@@ -87,8 +82,6 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         disabled={info === '...loading'}
-                        // дописать
-
                     >
                         Send false
                     </SuperButton>
@@ -96,9 +89,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
-                        // дописать
                         disabled={info === '...loading'}
-
                     >
                         Send undefined
                     </SuperButton>
@@ -106,9 +97,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
-                        // дописать
                         disabled={info === '...loading'}
-
                     >
                         Send null
                     </SuperButton>
