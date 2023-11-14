@@ -39,36 +39,35 @@ const getTechs = (params: ParamsType) => {
 }
 
 const HW15 = () => {
-    const [sort, setSort] = useState('')
-    const [page, setPage] = useState(1)
-    const [count, setCount] = useState(4)
-    const [idLoading, setLoading] = useState(false)
-    const [totalCount, setTotalCount] = useState(100)
+    const [sort, setSort] = useState('') //сортировка
+    const [page, setPage] = useState(1) //страница текущая??? currentPage
+    const [count, setCount] = useState(4) //по сколько штук выводит на строницу???
+    const [idLoading, setLoading] = useState(false) //загрузка
+    const [totalCount, setTotalCount] = useState(100) //общее количество
     const [searchParams, setSearchParams] = useSearchParams()
-    const [techs, setTechs] = useState<TechType[]>([])
+    const [techs, setTechs] = useState<TechType[]>([]) //cетаем пришедшие teches с сервера
 
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+                // делает студент сохранить пришедшие данные
+               res && setTechs(res?.data.techs)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
+        console.log(newPage, newCount)
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        sendQuery({page: newPage, count: newCount})
+        setSearchParams()
     }
 
     const onChangeSort = (newSort: string) => {
@@ -79,12 +78,11 @@ const HW15 = () => {
 
         // sendQuery(
         // setSearchParams(
-
-        //
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
+
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
@@ -103,10 +101,10 @@ const HW15 = () => {
     ))
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'} >
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
+            <div className={s.container}>
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
 
                 <SuperPagination
@@ -118,12 +116,12 @@ const HW15 = () => {
 
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
-                        tech
+                        Tech
                         <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
                     </div>
 
                     <div className={s.developerHeader}>
-                        developer
+                        Developer
                         <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
                     </div>
                 </div>

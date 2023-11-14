@@ -20,8 +20,15 @@
 
 .rowHeader {
     display: flex;
+    background-color: #c4c2c2;
+    padding: 10px 0;
+    width: 800px;
 }
 
 .loading {
 
+}
+
+.container {
+    margin: 20px 0 70px 70px;
 }
